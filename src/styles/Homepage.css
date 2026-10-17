@@ -1,0 +1,53 @@
+:root {
+    --header-footer-bg-color: rgb(223, 199, 164);
+    --header-footer-padding: 10px 20px;
+}
+
+.container {
+    margin: 0 10%;
+    background-color: blanchedalmond;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--header-footer-bg-color);
+    padding: var(--header-footer-padding);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+}
+
+.text-container {
+    flex: 3;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(252, 204, 133);
+}
+
+.image-container img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+footer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: var(--header-footer-bg-color);
+    padding: var(--header-footer-padding);
+}
