@@ -35,7 +35,7 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 20px;
-    background-color: rgb(252, 204, 133);
+    background-color: aliceblue;
 }
 
 .image-container img {

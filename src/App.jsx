@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="container">
       <header>
-          <a>Shopping Adventure</a>
+          <Link to="home">Shopping Adventure</Link>
           <nav>
               <Link to="home">Home</Link>
               <Link to="shop">Shop</Link>

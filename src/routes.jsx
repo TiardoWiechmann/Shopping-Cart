@@ -3,6 +3,7 @@ import Homepage from "./components/Homepage";
 import CartPage from "./components/CartPage";
 import ShopPage from "./components/ShopPage";
 
+
 const routes = [
     {
       path: "/",
