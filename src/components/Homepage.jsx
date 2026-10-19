@@ -6,7 +6,7 @@ export default function Homepage() {
             <main className="homepage">
                 <div className="home text-container">
                     <h1>Look for something that suits you well!</h1>
-                    <p>Find the things you always wanted. We have a big collection with variety of products that are of high quality.
+                    <p>Find the things you always wanted. We have a big collection with a variety of products that are of high quality.
                         No matter how much you are willing to pay. We are convinced that you find something which is perfect for you.
                     </p>
                 </div>
