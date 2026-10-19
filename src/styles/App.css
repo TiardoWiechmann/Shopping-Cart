@@ -1,1 +1,40 @@
+:root {
+    --header-footer-bg-color: rgb(223, 199, 164);
+    --header-footer-padding: 10px 20px;
+}
 
+.container {
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--header-footer-bg-color);
+    padding: var(--header-footer-padding);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: var(--header-footer-bg-color);
+    padding: var(--header-footer-padding);
+}
+
+button {
+    border-width: 0;
+    background-color: rgb(219, 186, 143);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(203, 172, 132);
+}

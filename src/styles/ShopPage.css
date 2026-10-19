@@ -1,76 +1,69 @@
-h1 {
-    margin: 20px auto 40px 20px;
-}
-
-.shop-container {
+.shop-page {
     margin: 10px;
 }
 
-.filter-buttons {
+.shop-heading {
+    margin: 20px auto 40px 20px;
+}
+
+.filter-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 10px;
-}
-button {
-    border-width: 0;
-    background-color: rgb(219, 186, 143);
-    padding: 5px 10px;
-    border-radius: 10px;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: rgb(203, 172, 132);
-}
-
-.products-container {
+.shop.products-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
-.product {
+.shop.product {
     flex: 1;
     background-color: aliceblue;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
 
-.product figure {
+.shop.product figure {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.product figcaption {
+.shop.product figcaption {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.price {
+.shop.price {
     color:grey;
     margin-top: auto;
 }
 
-.product img {
+.shop.product img {
     border-radius: 10px;
     aspect-ratio: 1;
     object-fit: contain;
+    min-width: 150px;
 }
 
-.number-of-items {
+.shop.number-of-items {
     display: flex;
     gap: 10px;
     height: 2rem;
 }
 
-input {
+.shop.number-of-items input {
     width: 3rem;
+    border-radius: 10px;
+    border-style: solid;
 }
 
