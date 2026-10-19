@@ -5,6 +5,10 @@ import { useState } from 'react';
 function App() {
     const [cart, setCart] = useState([]);
 
+    function numberOfCartItems() {
+        return cart.reduce((sum, current) => sum + current.quantity, 0);
+    }
+
     return (
         <div className="container">
         <header>
@@ -12,7 +16,7 @@ function App() {
             <nav>
                 <Link to="home">Home</Link>
                 <Link to="shop">Shop</Link>
-                <Link to="cart">Cart</Link> 
+                <Link to="cart">Cart {numberOfCartItems()}</Link> 
             </nav>
         </header>
         <Outlet context={[cart, setCart]}/>
