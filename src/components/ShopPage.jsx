@@ -6,26 +6,38 @@ import { useOutletContext } from "react-router";
 export default function ShopPage() {
     const {decrement, increment, updateQuantity, getCartItem} = useOutletContext();
     const [products, setProducts] = useState([]);
+    const [visibleProds, setVisibleProds] = useState([]);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
-            .then(data => setProducts(data));
+            .then(data => {
+                setProducts(data);
+                setVisibleProds(data);
+            });
     }, []);
 
+    function filterProducts(category) {
+        if(category){
+            setVisibleProds(products.filter((product) => product.category === category));
+        }
+        else {
+            setVisibleProds(products);
+        }
+    }
 
     return (
         <main className="shop-page">
             <h1>Let's go shopping!</h1>
             <div className="filter-container">
-                <button>All</button>
-                <button>Men's Clothing</button>
-                <button>Women's Clothing</button>
-                <button>Jewelry</button>
-                <button>Electronics</button>
+                <button onClick={() => filterProducts(null)}>All</button>
+                <button onClick={() => filterProducts("men's clothing")}>Men's Clothing</button>
+                <button onClick={() => filterProducts("women's clothing")}>Women's Clothing</button>
+                <button onClick={() => filterProducts("jewelery")}>Jewelery</button>
+                <button onClick={() => filterProducts("electronics")}>Electronics</button>
             </div>
             <div className="shop products-container">
-                {products.map(product => (
+                {visibleProds.map(product => (
                         <div className="shop product" key={product.id}>
                             <figure>
                                 <img src={product.image}/>
